@@ -1,7 +1,7 @@
 <template>
     <header class="flex justify-between items-center p-6 bg-opacity-50 relative z-20">
         <div class="text-3xl font-bold bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            Naman's <span class="font-black">Portfolio</span>
+            Dev <span class="font-black">Portfolio</span>
         </div>
         <div class="md:hidden z-30">
             <button type="button" class="block focus:outline-none p-2 rounded-lg bg-blue-800/50 hover:bg-blue-700/50 transition-all duration-300" @click="isMenuOpen = !isMenuOpen">
