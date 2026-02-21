@@ -4,6 +4,7 @@
         <Hero />
         <About />
         <ExperienceSkills />
+        <Projects />
     </div>
 </template>
 
@@ -14,6 +15,7 @@ import Navbar from './components/Navbar.vue';
 import Hero from './components/Hero.vue';
 import About from './components/About.vue';
 import ExperienceSkills from './components/ExperienceSkills.vue';
+import Projects from './components/projects.vue';
 import { ref, onMounted, nextTick } from 'vue';
 
 export default {
@@ -21,7 +23,8 @@ export default {
     Navbar,
     Hero,
     About,
-    ExperienceSkills
+    ExperienceSkills,
+    Projects
   },
   setup() {
     const loading = ref(true);
