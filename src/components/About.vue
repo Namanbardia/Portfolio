@@ -40,8 +40,6 @@
                 <div class="flex flex-col justify-center
                 order-1 lg:order-2">
 
-                
-                
                 <div class="text-center lg:text-left"
                 data-aos="fade-left">
                     <h2 class="text-white font-bold text-4xl md:text-5xl lg:text-6xl leading-tight">
@@ -90,7 +88,7 @@
                     <button
                     v-for="button in ctaButtons"
                     :key="button.id"
-                    class="px-8 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center"
+                    class="px-8 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center cursor-pointer"
                     :class="button.classes">
                         <component 
                         :is="button.icon" 

@@ -1,5 +1,5 @@
 <template>
-    <section class="relative w-full overflow-hidden min-h-screen flex items-center">
+    <section class="relative w-full overflow-hidden min-h-screen flex items-center" id="hero">
         <div class="w-full px-5 sm:px-8 md:px-12 lg:px-8 max-w-5xl lg:max-w-7xl mx-auto relative z-10">
             <div class="grid lg:grid-cols-2 gap-10 xl:gap-14 items-center">
                 <div class="flex flex-col md:mt-0 mt-20 justify-center">
@@ -32,14 +32,16 @@
                     data-aos-delay="300">
                         <button class="px-8 md:px-10 py-4 rounded-xl relative group
                         w-full sm:w-max flex justify-center overflow-hidden bg-linear-to-r from-blue-600 to-cyan-600
-                        hover:from-blue-500 hover:to-cyan-500 transition-all duration-300">
+                        hover:from-blue-500 hover:to-cyan-500 transition-all duration-300
+                        cursor-pointer">
                             <span class="relative flex items-center justify-center text-white font-semibold text-lg">
                                 Contact Me
                                 <ArrowRightIcon class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                             </span>
                         </button>
                         <button class="border-2 border-blue-400 px-8 md:px-10 py-4 rounded-xl relative group
-                        w-full sm:w-max flex justify-center hover:bg-blue-400/10 transition-all duration-300">
+                        w-full sm:w-max flex justify-center hover:bg-blue-400/10 transition-all duration-300 
+                        cursor-pointer">
                             <div class="flex items-center justify-center relative">
                                 <ArrowDownTrayIcon class="w-5 h-5 text-blue-400 group-hover:translate-y-1 transition-transform" />
                                 <span class="pl-3 text-blue-400 font-semibold text-lg">
@@ -62,7 +64,7 @@
                                 <img src="@/assets/hero.png" 
                                 alt="Naman - Software Engineer"
                                 loading="lazy"
-                                class="w-[500px] h-[500px] object-contain
+                                class="w-full h-full object-contain
                                 -translate-y-20">
                             </div>
                         </div>
