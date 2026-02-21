@@ -3,6 +3,7 @@
         <Navbar />
         <Hero />
         <About />
+        <ExperienceSkills />
     </div>
 </template>
 
@@ -12,13 +13,15 @@ import 'aos/dist/aos.css';
 import Navbar from './components/Navbar.vue';
 import Hero from './components/Hero.vue';
 import About from './components/About.vue';
+import ExperienceSkills from './components/ExperienceSkills.vue';
 import { ref, onMounted, nextTick } from 'vue';
 
 export default {
   components: {
     Navbar,
     Hero,
-    About
+    About,
+    ExperienceSkills
   },
   setup() {
     const loading = ref(true);
@@ -42,7 +45,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

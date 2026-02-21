@@ -59,7 +59,7 @@
                         -translate-y-6"
                         data-aos="zoom-in" data-aos-delay="500">
                             <div class="rounded-xl overflow-hidden">
-                                <img src="../../public/hero.png" 
+                                <img src="@/assets/hero.png" 
                                 alt="Naman - Software Engineer"
                                 loading="lazy"
                                 class="w-[500px] h-[500px] object-contain

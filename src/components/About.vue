@@ -109,10 +109,10 @@
 import { CodeBracketIcon, CodeBracketSquareIcon, Cog6ToothIcon, CommandLineIcon, ServerIcon, ChatBubbleLeftRightIcon, ArrowRightIcon } from '@heroicons/vue/24/solid';
 import { ref } from 'vue';
 
-import about1 from '../../public/about1.png';
-import about2 from '../../public/about2.png';
-import about3 from '../../public/about3.png';
-import about4 from '../../public/about4.png';
+import about1 from '@/assets/about1.png';
+import about2 from '@/assets/about2.png';
+import about3 from '@/assets/about3.png';
+import about4 from '@/assets/about4.png';
 
 const aboutImage = [
     {
@@ -179,20 +179,20 @@ const skills = [
         title: 'Technical Skills',
         description: 'DSA, OOPs, DBMS, OS, SQL',
     },
-    // {
-    //     id: 4,
-    //     icon: CommandLineIcon,
-    //     iconColor: 'text-blue-400',
-    //     title: 'Tools',
-    //     description: 'Git, Bitbucket, VSCode, Jira',
-    // }
     {
         id: 4,
         icon: CommandLineIcon,
         iconColor: 'text-blue-400',
-        title: 'Libraries',
-        description: 'Scikit-Learn, Numpy, Pandas, Matplotlib',
+        title: 'Tools',
+        description: 'Git, Bitbucket, VSCode, Jira',
     }
+    // {
+    //     id: 4,
+    //     icon: CommandLineIcon,
+    //     iconColor: 'text-blue-400',
+    //     title: 'Libraries',
+    //     description: 'Scikit-Learn, Numpy, Pandas, Matplotlib',
+    // }
 ];
 
 const ctaButtons = [
