@@ -12,12 +12,12 @@
 <script>
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Navbar from './components/Navbar.vue';
-import Hero from './components/Hero.vue';
-import About from './components/About.vue';
-import ExperienceSkills from './components/ExperienceSkills.vue';
-import Projects from './components/projects.vue';
-import Contact from './components/Contact.vue';
+import Navbar from '@/components/Navbar.vue';
+import Hero from '@/components/Hero.vue';
+import About from '@/components/About.vue';
+import ExperienceSkills from '@/components/ExperienceSkills.vue';
+import Projects from '@/components/projects.vue';
+import Contact from '@/components/Contact.vue';
 import { ref, onMounted, nextTick } from 'vue';
 
 export default {
