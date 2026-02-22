@@ -5,6 +5,7 @@
         <About />
         <ExperienceSkills />
         <Projects />
+        <Contact />
     </div>
 </template>
 
@@ -16,6 +17,7 @@ import Hero from './components/Hero.vue';
 import About from './components/About.vue';
 import ExperienceSkills from './components/ExperienceSkills.vue';
 import Projects from './components/projects.vue';
+import Contact from './components/Contact.vue';
 import { ref, onMounted, nextTick } from 'vue';
 
 export default {
@@ -24,7 +26,8 @@ export default {
     Hero,
     About,
     ExperienceSkills,
-    Projects
+    Projects,
+    Contact
   },
   setup() {
     const loading = ref(true);

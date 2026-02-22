@@ -91,11 +91,11 @@
                 hover:scale-105 
                 flex items-center justify-center gap-2
                 transition-all duration-300 cursor-pointer">
-                        
+
                     <span>View All Projects</span>
                     <ArrowRightIcon class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
-                
+
             
                 <!-- Discuss Project -->
                 <button class="px-16 py-5 rounded-xl 
@@ -104,7 +104,7 @@
                 hover:bg-blue-400/10 
                 flex items-center justify-center gap-2
                 transition-all duration-300 cursor-pointer">
-                    
+
                     <ChatBubbleLeftRightIcon class="w-5 h-5" />
                     <span>Discuss Project</span>
                 </button>
@@ -118,13 +118,15 @@
 <script setup>
 import { CodeBracketIcon, EyeIcon, ChatBubbleLeftRightIcon, ArrowRightIcon } from '@heroicons/vue/24/solid';
 import { ref } from 'vue';
+import project1 from '@/assets/project1.png';
+import project2 from '@/assets/project2.png';
 
 const projects = ref([
     {
         id: 1,
         title: 'Portfolio',
         description: 'Built an Portfolio website using Vue.js and Tailwind CSS.',
-        image: '@/assets/project1.png',
+        image: project1,
         category: 'Web Development',
         borderColor: 'border-blue-500/20',
         badgeColor: 'bg-blue-500',
@@ -161,7 +163,7 @@ const projects = ref([
         id: 2,
         title: 'Banking Management System',
         description: 'Made an Banking Management System using Python, OOPs and Streamlit.',
-        image: '@/assets/project2.png',
+        image: project2,
         category: 'OOPS',
         borderColor: 'border-blue-500/20',
         badgeColor: 'bg-blue-500',

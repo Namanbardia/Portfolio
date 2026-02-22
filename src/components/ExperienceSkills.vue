@@ -193,7 +193,7 @@ const experiences = [
 ];
 
 const techStack = [
-    "Vue.js", "Javascript", "Tailwind CSS", "SQL", "Git", "Bitbucket", "Jira", "Confluence", "Figma", "VS Code"
+    "Vue.js", "Javascript", "Python", "C/C++", "Tailwind CSS", "SQL", "Git", "Bitbucket", "Jira", "Confluence", "VS Code"
 ]
 
 </script>
