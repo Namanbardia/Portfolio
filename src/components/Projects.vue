@@ -84,7 +84,10 @@
             <div class="inline-flex flex-col sm:flex-row gap-4 items-center">
 
                 <!-- View All Projects -->
-                <button class="px-16 py-5 rounded-xl 
+                <a 
+                href="https://github.com/Namanbardia?tab=repositories"
+                target="_blank"
+                class="px-16 py-5 rounded-xl 
                 bg-gradient-to-r from-blue-500 to-cyan-500 
                 text-white font-semibold 
                 hover:shadow-lg hover:shadow-blue-500/25 
@@ -94,11 +97,14 @@
 
                     <span>View All Projects</span>
                     <ArrowRightIcon class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                </button>
+                </a>
 
             
                 <!-- Discuss Project -->
-                <button class="px-16 py-5 rounded-xl 
+                <a 
+                href="#contact"
+                @click.prevent="scrollToSection('#contact')"
+                class="px-16 py-5 rounded-xl 
                 border-2 border-blue-400 
                 text-blue-400 font-semibold 
                 hover:bg-blue-400/10 
@@ -107,7 +113,7 @@
 
                     <ChatBubbleLeftRightIcon class="w-5 h-5" />
                     <span>Discuss Project</span>
-                </button>
+                </a>
             
             </div>
         </div>
@@ -197,4 +203,9 @@ const projects = ref([
         ]
     }
 ]);
+
+const scrollToSection = () => {
+  const section = document.querySelector('#contact')
+  section?.scrollIntoView({ behavior: 'smooth' })
+}
 </script>

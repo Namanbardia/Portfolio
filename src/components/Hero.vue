@@ -30,25 +30,33 @@
                     <div class="flex items-center gap-4 pt-8 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0"
                     data-aos="fade-up"
                     data-aos-delay="300">
-                        <button class="px-8 md:px-10 py-4 rounded-xl relative group
-                        w-full sm:w-max flex justify-center overflow-hidden bg-linear-to-r from-blue-600 to-cyan-600
-                        hover:from-blue-500 hover:to-cyan-500 transition-all duration-300
-                        cursor-pointer">
-                            <span class="relative flex items-center justify-center text-white font-semibold text-lg">
-                                Contact Me
-                                <ArrowRightIcon class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                        <a 
+                        href="#contact"
+                        class="px-8 md:px-10 py-4 rounded-xl relative group
+                        w-full sm:w-max flex justify-center overflow-hidden 
+                        bg-linear-to-r from-blue-600 to-cyan-600
+                        hover:from-blue-500 hover:to-cyan-500 
+                        transition-all duration-300 cursor-pointer"
+                        @click.prevent="scrollToSection">
+                        <span class="relative flex items-center justify-center text-white font-semibold text-lg">
+                            Contact Me
+                            <ArrowRightIcon class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                        </a>
+                        <a 
+                        href="/Naman_CV.pdf"
+                        download="Naman Bardia CV.pdf"
+                        class="border-2 border-blue-400 px-8 md:px-10 py-4 rounded-xl relative group
+                        w-full sm:w-max flex justify-center hover:bg-blue-400/10 
+                        transition-all duration-300 cursor-pointer"
+>
+                        <div class="flex items-center justify-center relative">
+                            <ArrowDownTrayIcon class="w-5 h-5 text-blue-400 group-hover:translate-y-1 transition-transform" />
+                            <span class="pl-3 text-blue-400 font-semibold text-lg">
+                                Download CV
                             </span>
-                        </button>
-                        <button class="border-2 border-blue-400 px-8 md:px-10 py-4 rounded-xl relative group
-                        w-full sm:w-max flex justify-center hover:bg-blue-400/10 transition-all duration-300 
-                        cursor-pointer">
-                            <div class="flex items-center justify-center relative">
-                                <ArrowDownTrayIcon class="w-5 h-5 text-blue-400 group-hover:translate-y-1 transition-transform" />
-                                <span class="pl-3 text-blue-400 font-semibold text-lg">
-                                    Download CV
-                                </span>
-                            </div>
-                        </button>
+                        </div>
+                        </a>
                     </div>
                 </div>    
                 <!-- Image -->
@@ -83,7 +91,10 @@
 <script setup>
 import { ArrowRightIcon, ArrowDownTrayIcon } from '@heroicons/vue/24/solid';
 
-
+const scrollToSection = () => {
+  const section = document.querySelector('#contact')
+  section?.scrollIntoView({ behavior: 'smooth' })
+}
 </script>
 
 <style>

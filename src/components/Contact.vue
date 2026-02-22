@@ -78,20 +78,28 @@
 
         <!-- Contact Form -->
         <div data-aos="fade-left">
-            <form class="space-y-6">
+            <form @submit.prevent="handleSubmit" class="space-y-6">
                 <div class="grid sm:grid-cols-2 gap-6">
                     <div>
                         <label class="text-white text-sm font-medium mb-2 block">
                             Name
                         </label>
-                        <input type="text" class="w-full px-4 py-3 bg-gray-800/50 border border-blue-500/30 rounded-xl text-white placeholder-blue-300 focus:border-blue-400 focus:outline-none transition-all">
+                        <input 
+                        name="name"
+                        required
+                        type="text" 
+                        class="w-full px-4 py-3 bg-gray-800/50 border border-blue-500/30 rounded-xl text-white placeholder-blue-300 focus:border-blue-400 focus:outline-none transition-all">
                     </div>
 
                     <div>
                         <label class="text-white text-sm font-medium mb-2 block">
                             Email
                         </label>
-                        <input type="email" class="w-full px-4 py-3 bg-gray-800/50 border border-blue-500/30 rounded-xl text-white placeholder-blue-300 focus:border-blue-400 focus:outline-none transition-all">
+                        <input 
+                        name="email"
+                        required
+                        type="email" 
+                        class="w-full px-4 py-3 bg-gray-800/50 border border-blue-500/30 rounded-xl text-white placeholder-blue-300 focus:border-blue-400 focus:outline-none transition-all">
                     </div>
 
                 </div>
@@ -99,14 +107,20 @@
                         <label class="text-white text-sm font-medium mb-2 block">
                             Subject
                         </label>
-                        <input type="text" class="w-full px-4 py-3 bg-gray-800/50 border border-blue-500/30 rounded-xl text-white placeholder-blue-300 focus:border-blue-400 focus:outline-none transition-all">
+                        <input 
+                        name="subject"
+                        type="text" 
+                        class="w-full px-4 py-3 bg-gray-800/50 border border-blue-500/30 rounded-xl text-white placeholder-blue-300 focus:border-blue-400 focus:outline-none transition-all">
                     </div>
 
                     <div class="sm:col-span-2">
                         <label class="text-white text-sm font-medium mb-2 block">
                             Message
                         </label>
-                        <textarea rows=4 class="w-full px-4 py-3 bg-gray-800/50 border border-blue-500/30 rounded-xl text-white placeholder-blue-300 focus:border-blue-400 focus:outline-none transition-all">
+                        <textarea 
+                        name="message"
+                        rows=4 
+                        class="w-full px-4 py-3 bg-gray-800/50 border border-blue-500/30 rounded-xl text-white placeholder-blue-300 focus:border-blue-400 focus:outline-none transition-all">
                         </textarea>
                     </div>
 
@@ -127,6 +141,29 @@ import GithubIcon from '@/assets/SVGs/Github.svg'
 import WhatsappIcon from '@/assets/SVGs/Whatsapp.svg'
 import LeetcodeIcon from '@/assets/SVGs/Leetcode.svg'
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, ChatBubbleLeftRightIcon, UserGroupIcon, ShareIcon } from '@heroicons/vue/24/solid';
+
+const handleSubmit = async (e) => {
+  const formData = new FormData(e.target)
+
+  const data = Object.fromEntries(formData.entries())
+
+  const response = await fetch("https://formspree.io/f/mreayvbz", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+
+  if (response.ok) {
+    alert("Message sent successfully 🚀")
+    e.target.reset()
+  } else {
+    alert("Something went wrong ❌")
+  }
+}
+
 </script>
 
 <style>

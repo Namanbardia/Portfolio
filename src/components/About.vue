@@ -82,7 +82,7 @@
                         </p>                       
                     </div>
                 </div>
-                <div class="flex gap-4 pt-8 flex-col sm:flex-row"
+                <!-- <div class="flex gap-4 pt-8 flex-col sm:flex-row"
                 data-aos="fade-up"
                 data-aos-delay="400">
                     <button
@@ -96,7 +96,7 @@
                         :class="button.iconclass"></component>
                         {{ button.text }}
                     </button>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
