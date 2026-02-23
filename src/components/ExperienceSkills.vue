@@ -144,7 +144,7 @@ const skills = [
     },
     {
         id: 4,
-        title: 'Python Libraries',
+        title: 'Libraries & Frameworks',
         icon: CodeBracketSquareIcon,
         iconColor: 'text-cyan-400',
         percentage: 75,

@@ -153,7 +153,7 @@ const projects = ref([
         links: [
             {
                 name: 'Live Demo',
-                url: '#',
+                url: 'https://naman-portfolio-xi.vercel.app/',
                 icon: EyeIcon,
                 class: 'text-blue-400 hover:text-blue-300'
             },

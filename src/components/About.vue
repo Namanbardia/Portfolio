@@ -161,14 +161,14 @@ const skills = [
         icon: CodeBracketIcon,
         iconColor: 'text-blue-400',
         title: 'Frontend',
-        description: 'Vue Js, Javascript, Tailwind CSS, StreamLit',
+        description: 'Vue Js, Javascript, Tailwind CSS, HTML, CSS',
     },
     {
         id: 2,
         icon: CodeBracketSquareIcon,
         iconColor: 'text-cyan-400',
-        title: 'Programming Languages',
-        description: 'C/C++, Python, Java',
+        title: 'Libraries',
+        description: 'NumPy, Pandas, Matplotlib, Scikit-Learn, Streamlit',
     },
     {
         id: 3,

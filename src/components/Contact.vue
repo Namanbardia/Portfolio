@@ -66,11 +66,16 @@
                         <img :src="GithubIcon" class="w-5 h-5" />
                     </a>
 
-                    <a href="https://wa.me/918306868368?text=Hello%20Naman" 
+                    <a href="https://www.instagram.com/namanbardia.10?igsh=MXF0OGh5dDRnMzAxdA==" 
+                    target="_blank"
+                    class="p-3 bg-blue-500/20 border border-blue-400/30 rounded-xl text-blue-400 hover:bg-blue-500/30 transition-all">
+                        <img :src="InstagramIcon" class="w-5 h-5" />
+                    </a>
+                    <!-- <a href="https://wa.me/918306868368?text=Hello%20Naman" 
                     target="_blank"
                     class="p-3 bg-blue-500/20 border border-blue-400/30 rounded-xl text-blue-400 hover:bg-blue-500/30 transition-all">
                         <img :src="WhatsappIcon" class="w-5 h-5" />
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>
@@ -138,8 +143,9 @@
 <script setup>
 import LinkedinIcon from '@/assets/SVGs/Linkedin.svg'
 import GithubIcon from '@/assets/SVGs/Github.svg'
-import WhatsappIcon from '@/assets/SVGs/Whatsapp.svg'
-import LeetcodeIcon from '@/assets/SVGs/Leetcode.svg'
+// import WhatsappIcon from '@/assets/SVGs/Whatsapp.svg'
+// import LeetcodeIcon from '@/assets/SVGs/Leetcode.svg'
+import InstagramIcon from '@/assets/SVGs/Instagram.svg'
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, ChatBubbleLeftRightIcon, UserGroupIcon, ShareIcon } from '@heroicons/vue/24/solid';
 
 const handleSubmit = async (e) => {
