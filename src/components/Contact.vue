@@ -1,5 +1,18 @@
 <template>
   <section class="relative py-20 overflow-hidden" id="contact">
+    <!-- Toast Notification -->
+    <div 
+      class="fixed bottom-8 right-8 z-50 transition-all duration-300 transform"
+      :class="toast.show ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0 pointer-events-none'"
+    >
+      <div 
+        class="flex items-center px-6 py-4 rounded-xl shadow-2xl border backdrop-blur-md"
+        :class="toast.type === 'success' ? 'bg-primary-500/20 border-primary-500/50 text-white' : 'bg-red-500/20 border-red-500/50 text-white'"
+      >
+        <span class="font-semibold">{{ toast.message }}</span>
+      </div>
+    </div>
+
     <div class="px-4 sm:px-6 lg:px-8 max-w-4xl lg:px-8 mx-auto relative z-10">
       <div class="text-center m-16"
       data-aos="fade-up">
@@ -25,7 +38,7 @@
                     <EnvelopeIcon class="w-6 h-6 text-primary-400" />
                     <div>
                         <p class="text-white font-semibold">Email</p>
-                        <p class="text-primary-200 font-semibold">dummy@email.com</p>
+                        <p class="text-primary-200 font-semibold">bardiaji10@gmail.com</p>
                     </div>
                 </div>
 
@@ -34,7 +47,7 @@
                     <PhoneIcon class="w-6 h-6 text-primary-400" />
                     <div>
                         <p class="text-white font-semibold">Phone</p>
-                        <p class="text-primary-200 font-semibold">+91 xxxx xxx xxx</p>
+                        <p class="text-primary-200 font-semibold">+91 830 6868 368</p>
                     </div>
                 </div>
 
@@ -43,7 +56,7 @@
                     <MapPinIcon class="w-6 h-6 text-primary-400" />
                     <div>
                         <p class="text-white font-semibold">Location</p>
-                        <p class="text-primary-200 font-semibold">Dummy, Location</p>
+                        <p class="text-primary-200 font-semibold">Rohini, New Delhi, India</p>
                     </div>
                 </div>
             </div>
@@ -54,24 +67,24 @@
                     Social Links
                 </h4>
                 <div class="flex gap-4">
-                    <a href="#" 
+                    <a href="https://www.linkedin.com/in/naman-bardia/" 
                     target="_blank"
                     class="p-3 bg-primary-500/20 border border-primary-400/30 rounded-xl text-primary-400 hover:bg-primary-500/30 transition-all">
                         <img :src="LinkedinIcon" class="w-5 h-5" />
                     </a>
 
-                    <a href="#" 
+                    <a href="https://github.com/Namanbardia" 
                     target="_blank"
                     class="p-3 bg-secondary-500/20 border border-secondary-400/30 rounded-xl text-secondary-400 hover:bg-secondary-500/30 transition-all">
                         <img :src="GithubIcon" class="w-5 h-5" />
                     </a>
 
-                    <a href="#" 
+                    <a href="https://www.instagram.com/namanbardia.10?igsh=MXF0OGh5dDRnMzAxdA==" 
                     target="_blank"
                     class="p-3 bg-primary-500/20 border border-primary-400/30 rounded-xl text-primary-400 hover:bg-primary-500/30 transition-all">
                         <img :src="InstagramIcon" class="w-5 h-5" />
                     </a>
-                    <!-- <a href="#" 
+                    <!-- <a href="https://wa.me/918306868368?text=Hello%20Naman" 
                     target="_blank"
                     class="p-3 bg-primary-500/20 border border-primary-400/30 rounded-xl text-primary-400 hover:bg-primary-500/30 transition-all">
                         <img :src="WhatsappIcon" class="w-5 h-5" />
@@ -141,12 +154,26 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import LinkedinIcon from '@/assets/SVGs/Linkedin.svg'
 import GithubIcon from '@/assets/SVGs/Github.svg'
 // import WhatsappIcon from '@/assets/SVGs/Whatsapp.svg'
 // import LeetcodeIcon from '@/assets/SVGs/Leetcode.svg'
 import InstagramIcon from '@/assets/SVGs/Instagram.svg'
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, ChatBubbleLeftRightIcon, UserGroupIcon, ShareIcon } from '@heroicons/vue/24/solid';
+
+const toast = ref({
+  show: false,
+  message: '',
+  type: ''
+})
+
+const showToast = (message, type) => {
+  toast.value = { show: true, message, type }
+  setTimeout(() => {
+    toast.value.show = false
+  }, 3000)
+}
 
 const handleSubmit = async (e) => {
   const formData = new FormData(e.target)
@@ -163,10 +190,10 @@ const handleSubmit = async (e) => {
   })
 
   if (response.ok) {
-    alert("Message sent successfully 🚀")
+    showToast("Message sent successfully", "success")
     e.target.reset()
   } else {
-    alert("Something went wrong ❌")
+    showToast("Something went wrong", "error")
   }
 }
 
