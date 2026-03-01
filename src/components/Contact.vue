@@ -30,33 +30,46 @@
         <!-- Contact Info -->
         <div data-aos="fade-right">
             <h3 class="text-2xl font-bold text-white mb-6">
-                Contact Information
+                Connect With Me
             </h3>
-            <!-- Email -->
             <div class="space-y-6">
-                <div class="flex items-center gap-4">
-                    <EnvelopeIcon class="w-6 h-6 text-primary-400" />
+                <!-- Email -->
+                <a 
+                href="mailto:bardiaji10@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer" 
+                class="flex items-center gap-4 group cursor-pointer">
+                    <div class="w-12 h-12 bg-primary-500/10 border border-primary-400/20 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:bg-primary-500/20 group-hover:border-primary-400/40 group-hover:scale-105">
+                        <EnvelopeIcon class="w-6 h-6 text-primary-400 transition-transform duration-300 group-hover:-translate-y-1" />
+                    </div>
                     <div>
-                        <p class="text-white font-semibold">Email</p>
-                        <p class="text-primary-200 font-semibold">bardiaji10@gmail.com</p>
+                        <p class="text-white font-semibold transition-colors duration-300 group-hover:text-primary-400">Email</p>
+                        <p class="text-primary-200 font-medium">Discuss something? Or just Say Hi!</p>
+                    </div>
+                </a>
+
+                <!-- Availability -->
+                <div class="flex items-center gap-4 group cursor-default">
+                    <div class="w-12 h-12 bg-green-500/10 border border-green-400/20 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:bg-green-500/20 group-hover:border-green-400/40 group-hover:scale-105">
+                        <span class="relative flex h-4 w-4 transition-transform duration-300 group-hover:scale-110">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-4 w-4 bg-green-500"></span>
+                        </span>
+                    </div>
+                    <div>
+                        <p class="text-white font-semibold transition-colors duration-300 group-hover:text-green-400">Availability</p>
+                        <p class="text-green-400 font-medium">Open for Opportunities</p>
                     </div>
                 </div>
 
-                <!-- Phone -->
-                <div class="flex items-center gap-4">
-                    <PhoneIcon class="w-6 h-6 text-primary-400" />
-                    <div>
-                        <p class="text-white font-semibold">Phone</p>
-                        <p class="text-primary-200 font-semibold">+91 830 6868 368</p>
+                <!-- Response Time -->
+                 <div class="flex items-center gap-4 group cursor-default">
+                    <div class="w-12 h-12 bg-secondary-500/10 border border-secondary-400/20 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:bg-secondary-500/20 group-hover:border-secondary-400/40 group-hover:scale-105">
+                        <ChatBubbleLeftRightIcon class="w-6 h-6 text-secondary-400 transition-transform duration-300 group-hover:rotate-12" />
                     </div>
-                </div>
-
-                <!-- Location -->
-                 <div class="flex items-center gap-4">
-                    <MapPinIcon class="w-6 h-6 text-primary-400" />
                     <div>
-                        <p class="text-white font-semibold">Location</p>
-                        <p class="text-primary-200 font-semibold">Rohini, New Delhi, India</p>
+                        <p class="text-white font-semibold transition-colors duration-300 group-hover:text-secondary-400">Let's Connect</p>
+                        <p class="text-primary-200 font-medium">Response within 24 hours</p>
                     </div>
                 </div>
             </div>
@@ -160,7 +173,7 @@ import GithubIcon from '@/assets/SVGs/Github.svg'
 // import WhatsappIcon from '@/assets/SVGs/Whatsapp.svg'
 // import LeetcodeIcon from '@/assets/SVGs/Leetcode.svg'
 import InstagramIcon from '@/assets/SVGs/Instagram.svg'
-import { EnvelopeIcon, PhoneIcon, MapPinIcon, ChatBubbleLeftRightIcon, UserGroupIcon, ShareIcon } from '@heroicons/vue/24/solid';
+import { EnvelopeIcon, ChatBubbleLeftRightIcon } from '@heroicons/vue/24/solid';
 
 const toast = ref({
   show: false,
