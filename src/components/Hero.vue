@@ -10,11 +10,11 @@
                     >
                         <h1 class="text-white text-4xl font-bold md:text-5xl lg:text-6xl leading-tight">
                             Hi, I'm
-                            <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-400">
+                            <span class="text-transparent bg-clip-text bg-linear-to-r from-primary-400 to-secondary-400">
                                 Naman
                             </span>
                         </h1>
-                        <p class="text-blue-200 font-medium text-lg md:text-xl mt-4"
+                        <p class="text-primary-200 font-medium text-lg md:text-xl mt-4"
                         data-aos="fade-right"
                         data-aos-delay="400">
                         Software Engineer.
@@ -34,8 +34,8 @@
                         href="#contact"
                         class="px-8 md:px-10 py-4 rounded-xl relative group
                         w-full sm:w-max flex justify-center overflow-hidden 
-                        bg-linear-to-r from-blue-600 to-cyan-600
-                        hover:from-blue-500 hover:to-cyan-500 
+                        bg-linear-to-r from-primary-600 to-secondary-600
+                        hover:from-primary-500 hover:to-secondary-500 
                         transition-all duration-300 cursor-pointer"
                         @click.prevent="scrollToSection">
                         <span class="relative flex items-center justify-center text-white font-semibold text-lg">
@@ -46,13 +46,13 @@
                         <a 
                         href="/Naman_CV.pdf"
                         download="Naman Bardia CV.pdf"
-                        class="border-2 border-blue-400 px-8 md:px-10 py-4 rounded-xl relative group
-                        w-full sm:w-max flex justify-center hover:bg-blue-400/10 
+                        class="border-2 border-primary-400 px-8 md:px-10 py-4 rounded-xl relative group
+                        w-full sm:w-max flex justify-center hover:bg-primary-400/10 
                         transition-all duration-300 cursor-pointer"
 >
                         <div class="flex items-center justify-center relative">
-                            <ArrowDownTrayIcon class="w-5 h-5 text-blue-400 group-hover:translate-y-1 transition-transform" />
-                            <span class="pl-3 text-blue-400 font-semibold text-lg">
+                            <ArrowDownTrayIcon class="w-5 h-5 text-primary-400 group-hover:translate-y-1 transition-transform" />
+                            <span class="pl-3 text-primary-400 font-semibold text-lg">
                                 Download CV
                             </span>
                         </div>
@@ -63,9 +63,9 @@
                 <div class="lg:h-full flex justify-center lg:justify-end ">
                     <div class="relative w-full max-w-md lg:max-w-lg">
                         <div class="relative z-10 bg-linear-to-r 
-                        from-blue-600 to-cyan-600 shadow-2-xl
+                        from-primary-600 to-secondary-600 shadow-2-xl
                         rounded-[50%_40%_30%_60%/60%_30%_70%_30%]
-                        p-4 backdrop-blur-sm border border-blue-500/30
+                        p-4 backdrop-blur-sm border border-primary-500/30
                         -translate-y-6"
                         data-aos="zoom-in" data-aos-delay="500">
                             <div class="rounded-xl overflow-hidden">
@@ -76,7 +76,7 @@
                                 -translate-y-20">
                             </div>
                         </div>
-                        <div class="absolute -top-2 -right-4 w-10 h-10 bg-blue-400 rounded-full blur-sm opacity-6
+                        <div class="absolute -top-2 -right-4 w-10 h-10 bg-primary-400 rounded-full blur-sm opacity-6
                         animate-pulse">
                         </div>
                     </div>

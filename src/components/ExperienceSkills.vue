@@ -4,18 +4,18 @@
             <div class="text-center mb-16"
             data-aos="fade-up">
                 <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
-                    <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-400">
+                    <span class="text-transparent bg-clip-text bg-linear-to-r from-primary-400 to-secondary-400">
                         Skills
                     </span>& Experience
                 </h2>
-                <p class="text-blue-200 text-lg max-w-2xl mx-auto">
+                <p class="text-primary-200 text-lg max-w-2xl mx-auto">
                     My Technical Expertise and professional experience
                 </p>
             </div>
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
                 <div data-aos="fade-right">
                     <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3 ">
-                        <ChartBarIcon class="w-6 h-6 text-blue-400" />
+                        <ChartBarIcon class="w-6 h-6 text-primary-400" />
                         Technical Skills 
                     </h3>
                     <div class="space-y-6">
@@ -24,7 +24,7 @@
                         :key="skill.id"
                         class="group">
                             <div class="flex items-center justify-between mb-3">
-                                <span class="text-blue-200 font-semibold flex items-center gap-2">
+                                <span class="text-primary-200 font-semibold flex items-center gap-2">
                                     <component
                                     :is="skill.icon"
                                     :class="skill.iconColor"
@@ -51,14 +51,14 @@
 
                         <div class="mt-12">
                             <h4 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                                <Square3Stack3DIcon class="w-6 h-6 text-cyan-400" />
+                                <Square3Stack3DIcon class="w-6 h-6 text-secondary-400" />
                                 Tech Stack
                             </h4>
                             <div class="flex flex-wrap gap-3">
                                 <span
                                 v-for="tech in techStack"
                                 :key="tech"
-                                class="px-4 py-2 bg-linear-to-r from-blue-500/20 border border-blue-400/30 rounded-full text-blue-200 text-sm font-medium hover:scale-105 transition-transform duration-300">
+                                class="px-4 py-2 bg-linear-to-r from-primary-500/20 border border-primary-400/30 rounded-full text-primary-200 text-sm font-medium hover:scale-105 transition-transform duration-300">
                                     {{ tech }}
                                 </span>
                             </div>
@@ -68,7 +68,7 @@
 
                 <div data-aos="fade-left">
                     <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                        <BriefcaseIcon class="w-8 h-8 text-cyan-400" />
+                        <BriefcaseIcon class="w-8 h-8 text-secondary-400" />
                         Internship Experience
                     </h3>
                     <div class="space-y-8">
@@ -80,8 +80,8 @@
                             <div class="absolute -left-2 top-0 w-4 h-4 rounded-full group-hover:scale-150 transition-transform duration-300"
                             :class="experience.dotColor"></div>
                             
-                            <div class="bg-linear-to-r from-gray-800/50 to-blue-900/30 rounded-2xl p-6 border
-                            backdrop-blur-sm group-hover:border-blue-400/40 transition-all duration-300"
+                            <div class="bg-linear-to-r from-gray-800/50 to-primary-900/30 rounded-2xl p-6 border
+                            backdrop-blur-sm group-hover:border-primary-400/40 transition-all duration-300"
                             :class="experience.borderClass">
                                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                                     <h4 class="text-lg font-bold text-white">{{ experience.position }}</h4>
@@ -98,7 +98,7 @@
                                 </p>
 
                                 <p
-                                class="text-blue-100 text-sm leading-relaxed">
+                                class="text-primary-100 text-sm leading-relaxed">
                                     {{ experience.description }}
                                 </p>
                             </div>
@@ -119,37 +119,37 @@ const skills = [
         id: 1,
         title: 'Frontend Development',
         icon: CodeBracketIcon,
-        iconColor: 'text-blue-400',
+        iconColor: 'text-primary-400',
         percentage: 70,
-        percentageColor: 'text-blue-400 text-sm',
-        gradient: 'bg-linear-to-r from-blue-500 to-cyan-500'
+        percentageColor: 'text-primary-400 text-sm',
+        gradient: 'bg-linear-to-r from-primary-500 to-secondary-500'
     },
     {
         id: 2,
         title: 'Core CS Fundamentals',
         icon: ServerIcon,
-        iconColor: 'text-cyan-400',
+        iconColor: 'text-secondary-400',
         percentage: 75,
-        percentageColor: 'text-cyan-400 text-sm',
-        gradient: 'bg-linear-to-r from-cyan-500 to-blue-500'
+        percentageColor: 'text-secondary-400 text-sm',
+        gradient: 'bg-linear-to-r from-secondary-500 to-primary-500'
     },
     {
         id: 3,
         title: 'Programming Languages',
         icon: CubeTransparentIcon,
-        iconColor: 'text-blue-400',
+        iconColor: 'text-primary-400',
         percentage: 80,
-        percentageColor: 'text-blue-400 text-sm',
-        gradient: 'bg-linear-to-r from-blue-500 to-cyan-500'
+        percentageColor: 'text-primary-400 text-sm',
+        gradient: 'bg-linear-to-r from-primary-500 to-secondary-500'
     },
     {
         id: 4,
         title: 'Libraries & Frameworks',
         icon: CodeBracketSquareIcon,
-        iconColor: 'text-cyan-400',
+        iconColor: 'text-secondary-400',
         percentage: 75,
-        percentageColor: 'text-cyan-400 text-sm',
-        gradient: 'bg-linear-to-r from-cyan-500 to-blue-500'
+        percentageColor: 'text-secondary-400 text-sm',
+        gradient: 'bg-linear-to-r from-secondary-500 to-primary-500'
     }
 ];
 
@@ -160,11 +160,11 @@ const experiences = [
         company: 'Qyupe Software Private Limited',
         duration: 'Jan 2026 - Present',
         description: 'As an Epic Engineer, I work on EPMLs to make the internal features for the company which are light weight, highly customizable, reusable and easy to implement. ',
-        borderColor: 'border-blue-500/30',
-        dotColor: 'bg-blue-500',
-        borderClass: 'border-blue-500/20',
-        dateColor: 'text-blue-400 text-sm font-semibold',
-        companyColor: 'text-cyan-400',        
+        borderColor: 'border-primary-500/30',
+        dotColor: 'bg-primary-500',
+        borderClass: 'border-primary-500/20',
+        dateColor: 'text-primary-400 text-sm font-semibold',
+        companyColor: 'text-secondary-400',        
     },
     {
         id: 2,
@@ -172,11 +172,11 @@ const experiences = [
         company: 'ConviSaaS Inc.',
         duration: 'Nov. 2025 - Present',
         description: 'As an Feature Engineer, I work on Vue.js and other technologies like confluence, jira, figma to make the internal features for the company end to end. ',
-        borderColor: 'border-cyan-500/30',
-        dotColor: 'bg-cyan-500',
-        borderClass: 'border-cyan-500/20',
-        dateColor: 'text-cyan-400 text-sm font-semibold',
-        companyColor: 'text-blue-400',        
+        borderColor: 'border-secondary-500/30',
+        dotColor: 'bg-secondary-500',
+        borderClass: 'border-secondary-500/20',
+        dateColor: 'text-secondary-400 text-sm font-semibold',
+        companyColor: 'text-primary-400',        
     },
     {
         id: 3,
@@ -184,11 +184,11 @@ const experiences = [
         company: 'ConviSaaS Inc.',
         duration: 'Oct. 2025 - Nov. 2025',
         description: 'As an Product Engineer, I worked on Vue.js and other technologies like confluence, jira, figma to design and develop the web pages and solve bugs in the existing code.',
-        borderColor: 'border-blue-500/30',
-        dotColor: 'bg-blue-500',
-        borderClass: 'border-blue-500/20',
-        dateColor: 'text-blue-400 text-sm font-semibold',
-        companyColor: 'text-cyan-400',        
+        borderColor: 'border-primary-500/30',
+        dotColor: 'bg-primary-500',
+        borderClass: 'border-primary-500/20',
+        dateColor: 'text-primary-400 text-sm font-semibold',
+        companyColor: 'text-secondary-400',        
     }
 ];
 

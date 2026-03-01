@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen bg-linear-to-br from-gray-900 via-blue-900 to-gray-900">
+    <div class="min-h-screen bg-linear-to-br from-gray-900 via-primary-900 to-gray-900">
         <Navbar />
         <Hero />
         <About />

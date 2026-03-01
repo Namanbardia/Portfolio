@@ -7,11 +7,11 @@
                     <div class="relative w-full max-w-md">
                         <div 
                         data-aos="zoom-in"
-                        class="relative bg-linear-to-br from-gray-800/60 to-blue-900/40 rounded-3xl p-6
-                        backdrop-blur-sm border border-blue-500/30 shadow-2xl">
+                        class="relative bg-linear-to-br from-gray-800/60 to-primary-900/40 rounded-3xl p-6
+                        backdrop-blur-sm border border-primary-500/30 shadow-2xl">
                             <div class="grid grid-cols-2 gap-4">
                                 <div
-                                v-for="(image, index) in aboutImage"
+                                v-for="(image) in aboutImage"
                                 :key="image.id"
                                 :data-aos="image.animation"
                                 :data-aos-delay="image.delay"
@@ -43,11 +43,11 @@
                 <div class="text-center lg:text-left"
                 data-aos="fade-left">
                     <h2 class="text-white font-bold text-4xl md:text-5xl lg:text-6xl leading-tight">
-                        About <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-400">
+                        About <span class="text-transparent bg-clip-text bg-linear-to-r from-primary-400 to-secondary-400">
                             Me
                         </span>
                     </h2>
-                    <p class="text-blue-400 font-medium text-lg md:text-xl mt-4"
+                    <p class="text-primary-400 font-medium text-lg md:text-xl mt-4"
                     data-aos="fade-left"
                     data-aos-delay="100">
                         Software Developer
@@ -77,7 +77,7 @@
                                 {{ skill.title }}
                             </h3>     
                         </div>
-                        <p class="text-blue-100 text-sm">
+                        <p class="text-primary-100 text-sm">
                             {{ skill.description }}
                         </p>                       
                     </div>
@@ -117,9 +117,9 @@ const aboutImage = [
         id: 1,
         src: about1,
         alt: 'Naman - Professional Photo',
-        gradient: 'bg-linear-to-r from-blue-600 to-cyan-600 border-blue-400/40',
+        gradient: 'bg-linear-to-r from-primary-600 to-secondary-600 border-primary-400/40',
         badge: 'Professional',
-        badgeColor: 'bg-blue-500',
+        badgeColor: 'bg-primary-500',
         animation: 'fade-right',
         delay: 200,
     },
@@ -127,9 +127,9 @@ const aboutImage = [
         id: 2,
         src: about2,
         alt: 'Naman - Working Environment',
-        gradient: 'bg-linear-to-r from-blue-600 to-cyan-600 border-blue-400/40',
+        gradient: 'bg-linear-to-r from-primary-600 to-secondary-600 border-primary-400/40',
         badge: 'Creative',
-        badgeColor: 'bg-cyan-500',
+        badgeColor: 'bg-secondary-500',
         animation: 'fade-left',
         delay: 300,
     },
@@ -137,9 +137,9 @@ const aboutImage = [
         id: 3,
         src: about3,
         alt: 'Naman - Developer Photo',
-        gradient: 'bg-linear-to-r from-blue-600 to-cyan-600 border-blue-400/40',
+        gradient: 'bg-linear-to-r from-primary-600 to-secondary-600 border-primary-400/40',
         badge: 'Developer',
-        badgeColor: 'bg-blue-600',
+        badgeColor: 'bg-primary-600',
         animation: 'fade-right',
         delay: 400,
     },
@@ -147,9 +147,9 @@ const aboutImage = [
         id: 4,
         src: about4,
         alt: 'Naman - Gamer Photo',
-        gradient: 'bg-linear-to-r from-blue-600 to-cyan-600 border-blue-400/40',
+        gradient: 'bg-linear-to-r from-primary-600 to-secondary-600 border-primary-400/40',
         badge: 'Gamer',
-        badgeColor: 'bg-cyan-600',
+        badgeColor: 'bg-secondary-600',
         animation: 'fade-left',
         delay: 500,
     }
@@ -159,28 +159,28 @@ const skills = [
     {
         id: 1,
         icon: CodeBracketIcon,
-        iconColor: 'text-blue-400',
+        iconColor: 'text-primary-400',
         title: 'Frontend',
         description: 'Vue Js, Javascript, Tailwind CSS, HTML, CSS',
     },
     {
         id: 2,
         icon: CodeBracketSquareIcon,
-        iconColor: 'text-cyan-400',
+        iconColor: 'text-secondary-400',
         title: 'Libraries',
         description: 'NumPy, Pandas, Matplotlib, Scikit-Learn, Streamlit',
     },
     {
         id: 3,
         icon: Cog6ToothIcon,
-        iconColor: 'text-cyan-400',
+        iconColor: 'text-secondary-400',
         title: 'Technical Skills',
         description: 'DSA, OOPs, DBMS, OS, SQL',
     },
     {
         id: 4,
         icon: CommandLineIcon,
-        iconColor: 'text-blue-400',
+        iconColor: 'text-primary-400',
         title: 'Tools',
         description: 'Git, Bitbucket, VSCode, Jira',
     }
@@ -199,14 +199,14 @@ const ctaButtons = [
         text: 'View Porfolio',
         icon: ArrowRightIcon,
         iconclass: 'ml-2 group-hover:translate-x-1 transition-transform',
-        classes: 'bg-linear-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-500 hover:to-cyan-500'
+        classes: 'bg-linear-to-r from-primary-600 to-secondary-600 text-white hover:from-primary-500 hover:to-secondary-500'
     },
     {
         id: 1,
         text: 'Contact Me',
         icon: ChatBubbleLeftRightIcon,
         iconclass: 'mr-2',
-        classes: 'border border-blue-400 text-blue-400 hover:bg-blue-400/10'
+        classes: 'border border-primary-400 text-primary-400 hover:bg-primary-400/10'
     }
 ]
 

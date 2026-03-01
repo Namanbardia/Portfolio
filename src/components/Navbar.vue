@@ -1,41 +1,39 @@
 <template>
     <header class="fixed top-3 left-3 right-3 flex justify-between items-center rounded-full p-6 bg-[#111827]/30 backdrop-blur-md z-50">
-        <div class="text-3xl font-bold ml-8 bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent
+        <div class="text-3xl font-bold ml-8 bg-linear-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent
         cursor-pointer hover:scale-105 transition-all duration-300"
         @click="scrollToSection('#hero')">
             Dev <span class="font-black">Portfolio</span>
         </div>
         <div class="md:hidden z-30">
-            <button type="button" class="block focus:outline-none p-2 rounded-lg bg-blue-800/50 hover:bg-blue-700/50 transition-all duration-300" @click="isMenuOpen = !isMenuOpen">
                 <div class="relative w-6 h-6">
                     <span :class="[
-                        `absolute left-0 w-6 h-0.5 bg-blue-200 transition-all duration-300`,
+                        `absolute left-0 w-6 h-0.5 bg-primary-200 transition-all duration-300`,
                         isMenuOpen ? 'rotate-45 top-3' : 'top-1'                        
                     ]"></span>
 
                     <span :class="[
-                        `absolute left-0 w-6 h-0.5 bg-blue-200 transition-all duration-300`,
+                        `absolute left-0 w-6 h-0.5 bg-primary-200 transition-all duration-300`,
                         isMenuOpen ? 'opacity-0' : 'top-3 opacity-100'                        
                     ]"></span>
 
                     <span :class="[
-                        `absolute left-0 w-6 h-0.5 bg-blue-200 transition-all duration-300`,
+                        `absolute left-0 w-6 h-0.5 bg-primary-200 transition-all duration-300`,
                         isMenuOpen ? '-rotate-45 top-3' : 'top-5'                        
                     ]"></span>
                 </div>
-            </button>
         </div>
 
         <!-- Tagline & Progressbar -->
         <div class="flex-col items-center hidden lg:flex absolute left-1/2 -translate-x-1/2">
             <!-- Tagline -->
-            <p class="text-blue-200/70 font-black text-lg md:text-xl">
+            <p class="text-primary-200/70 font-black text-lg md:text-xl">
                 Curious Mind. Creative Solutions.
             </p>
 
             <!-- Progressbar -->
-            <div class="absolute bottom-0 left-0 w-full h-[2px] bg-blue-500/20 rounded-full overflow-hidden">
-                <div class="h-full bg-linear-to-r from-blue-400 to-cyan-400 transition-all duration-300"
+            <div class="absolute bottom-0 left-0 w-full h-[2px] bg-primary-500/20 rounded-full overflow-hidden">
+                <div class="h-full bg-linear-to-r from-primary-400 to-secondary-400 transition-all duration-300"
                 :style="{ width: scrollProgress + '%' }">
 
                 </div>
@@ -49,21 +47,50 @@
         ]">
             <ul class="flex flex-col items-center space-y-5 md:flex-row md:space-x-5 md:space-y-0">
                 <li v-for="item in Menu" :key="item.name" class="group-relative" @click.prevent="scrollToSection(item.href)">
-                    <a :href="item.href" class="relative block text-blue-100 hover:text-blue-400 transition-all duration-300 text-xl md:text-base font-medium group" @click="scrollToSection(item.href)">
+                    <a :href="item.href" class="relative block text-primary-100 hover:text-primary-400 transition-all duration-300 text-xl md:text-base font-medium group" @click="scrollToSection(item.href)">
                         {{ item.name }}
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 transition-all duration-300 group-hover:w-full"></span>
                     </a>
                 </li>
             </ul>
-            <div class="mt-8 md:mt-0 md:ml-8">
-                <a 
-                href="https://www.linkedin.com/in/naman-bardia/"
+            <div class="mt-8 md:mt-0 md:ml-8 flex items-center justify-center">
+                <!-- <a 
+                href="#"
                 target="_blank"
-                class="px-6 py-2.5 bg-linear-to-r from-blue-500 to-cyan-500 text-white rounded-full 
-                hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105
+                class="px-6 py-2.5 bg-linear-to-r from-primary-500 to-secondary-500 text-white rounded-full 
+                hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300 hover:scale-105
                 cursor-pointer">
-                    Let's Talk
-                </a>
+                    Let's Connect
+                </a> -->
+
+                <!-- Theme Toggle Capsule -->
+                <div class="relative flex items-center bg-gray-800/80 rounded-full p-1 border border-primary-500/30 shadow-inner group w-[80px] h-[44px]">
+                    <!-- Sliding Background -->
+                    <div 
+                        class="absolute top-1 bottom-1 w-[36px] rounded-full shadow-md transition-all duration-300 ease-in-out"
+                        :class="[
+                            theme === 'default' 
+                                ? 'translate-x-0 bg-linear-to-r from-blue-500 to-cyan-500' 
+                                : 'translate-x-[36px] bg-linear-to-r from-emerald-500 to-teal-500'
+                        ]"
+                    ></div>
+                    
+                    <button 
+                        @click="theme !== 'default' && toggleTheme()"
+                        class="relative w-[36px] h-[36px] flex items-center justify-center rounded-full transition-all duration-300 focus:outline-none z-10"
+                        :class="theme === 'default' ? 'text-white' : 'opacity-50 hover:opacity-100'"
+                        aria-label="Blue and Cyan theme">
+                        <img :src="WaterDropIcon" alt="Blue Theme" class="w-5 h-5 invert" />
+                    </button>
+                    
+                    <button 
+                        @click="theme !== 'emerald' && toggleTheme()"
+                        class="relative w-[36px] h-[36px] flex items-center justify-center rounded-full transition-all duration-300 focus:outline-none z-10"
+                        :class="theme === 'emerald' ? 'text-white' : 'opacity-50 hover:opacity-100'"
+                        aria-label="Emerald and Teal theme">
+                        <img :src="LeafIcon" alt="Emerald Theme" class="w-5 h-5 invert" />
+                    </button>
+                </div>
             </div>
         </nav>
     </header>
@@ -71,6 +98,12 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { useTheme } from '../composables/useTheme';
+
+import WaterDropIcon from '@/assets/SVGs/WaterDrop.svg';
+import LeafIcon from '@/assets/SVGs/Leaf.svg';
+
+const { theme, toggleTheme } = useTheme();
 
 const Menu = ref([
     {name: 'About Me', href: '#about'},
